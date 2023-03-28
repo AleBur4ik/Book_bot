@@ -4,6 +4,11 @@ from environs import Env
 
 
 @dataclass
+class TgBot:
+    token: str
+
+
+@dataclass
 class Config:
     tg_bot: TgBot
 
