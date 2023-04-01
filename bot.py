@@ -22,6 +22,8 @@ async def main():
                    parse_mode='HTML')
     dp: Dispatcher = Dispatcher()
 
+    await set_main_menu(bot)
+
     dp.include_router(user_handlers.router)
     dp.include_router(other_handlers.router)
 

@@ -27,7 +27,7 @@ async def process_help_command(message: Message):
 
 @router.message(Command(commands='beginning'))
 async def process_beginning_command(message: Message):
-    users_db[message.from_user.id]['page'] = 1
+    user_db[message.from_user.id]['page'] = 1
     text = book[user_db[message.from_user.id]['page']]
     await message.answer(
         text=text,
